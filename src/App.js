@@ -1,6 +1,5 @@
 import classes from "./App.module.css"
-import Input from "./Input/Input.js"
-import Button from "./Button/Button";
+import EnterField from './EnterField'
 
 
 const App=()=>{
@@ -10,14 +9,10 @@ const App=()=>{
         <img className={classes.img} src="https://cdn-icons.flaticon.com/png/512/310/premium/310818.png?token=exp=1648986040~hmac=26a8efe591eab5e312d53f4d2734e27e" alt='Нет фото'/>
     </div>
     <div className={classes.mid}>
-      <div className={classes.panel}>
-          <h1>Авторизация</h1>
-          <Input/>
-          <Input/>
-          <Button/>
+        <EnterField/>
       </div>
-    </div>
     <div className={classes.bot}>8981232312312 - по вопросам сотрудничества</div>
   </div>
+
 }
 export default App

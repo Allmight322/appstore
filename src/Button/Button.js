@@ -1,10 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from "./Button.module.css"
 
-const Button = () => {
+ export const Button = (props) => {
+    const [loginChange, setLoginChange] = useState();
+
+
+    const result=(targetValue)=>{
+        setLoginChange(targetValue.target.value)
+        console.log(loginChange)
+    }
     return (
         <div>
-            <button className={classes.content}>Войти</button>
+            <button className={classes.content}
+                    onClick={result}
+            >Войти</button>
         </div>
     );
 };
