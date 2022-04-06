@@ -1,19 +1,13 @@
 import React, {useState} from 'react';
 import classes from "./Button.module.css"
 
+
  export const Button = (props) => {
-    const [loginChange, setLoginChange] = useState();
+    const logPass1 = props.logPass1
 
-
-    const result=(targetValue)=>{
-        setLoginChange(targetValue.target.value)
-        console.log(loginChange)
-    }
     return (
         <div>
-            <button className={classes.content}
-                    onClick={result}
-            >Войти</button>
+            <button className={classes.content} onClick={logPass1}>Войти</button>
         </div>
     );
 };
