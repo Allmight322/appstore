@@ -2,23 +2,21 @@ import React from 'react';
 import classes from "./Input.module.css"
 import {useState} from "react";
  export const Input = (props) => {
+     const log = props.onChangeHandler
+     const pas = props.onChangeHandler
 
-    const[text, setText] = useState();
-    const textHandler =(targetValue) => {
+    /*const[text, setText] = useState();*/
+    const onChangeHandler =(targetValue) => {
         log(targetValue.target.value)
-        pass(targetValue.target.value)
+        pas(targetValue.target.value)
+
+
     }
-
-     const log = props.setLogin1
-      const pass = props.setPassword1
-
-
-
 
     return (
         <div>
             <input className={classes.content} onChange=
-                {textHandler}
+                {onChangeHandler}
             />
         </div>
     );

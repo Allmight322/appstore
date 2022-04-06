@@ -12,15 +12,12 @@ const EnterField = () => {
         console.log(login, password)
     }
 
-
-
-
     return (
         <div className={classes.panel}>
             <h1>Авторизация</h1>
-            <Input setLogin1={setLogin} />
-            <Input setPassword1={setPassword}/>
-            <Button logPass1={logPass}/>
+            <Input onChangeHandler={setLogin}/>
+            <Input onChangeHandler={setPassword}/>
+            <Button onClickHandler={logPass}/>
         </div>
     );
 };

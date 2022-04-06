@@ -3,11 +3,11 @@ import classes from "./Button.module.css"
 
 
  export const Button = (props) => {
-    const logPass1 = props.logPass1
+    const onClickHandler = props.onClickHandler
 
     return (
         <div>
-            <button className={classes.content} onClick={logPass1}>Войти</button>
+            <button className={classes.content} onClick={onClickHandler}>Войти</button>
         </div>
     );
 };
