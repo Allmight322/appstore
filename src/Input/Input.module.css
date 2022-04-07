@@ -1,8 +1,23 @@
-.content:focus {
-    color: #212529;
-    background-color: #fff;
-    border-color: #bdbdbd;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
-
+.content{
+    border:1px solid black;
+    border-radius: 3px;
+    position: relative;
 }
+.content input {
+    border:none;
+    outline: none;
+}
+.content label {
+    position: absolute;
+    left: 6px;
+    color: #777777;
+    background: white;
+    transition: .2s;
+}
+.content:focus-within label,
+.content input:not(:placeholder-shown){
+    margin: -17px 0;
+}
+
+
+
