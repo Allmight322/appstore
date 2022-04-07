@@ -15,8 +15,8 @@ const EnterField = () => {
     return (
         <div className={classes.panel}>
             <h1>Авторизация</h1>
-            <Input onChangeHandler={setLogin}/>
-            <Input onChangeHandler={setPassword}/>
+            <Input onChangeHandler={setLogin} onShadow={'text'}/>
+            <Input onChangeHandler={setPassword} onShadow={'password'}/>
             <Button onClickHandler={logPass}/>
         </div>
     );
