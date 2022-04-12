@@ -5,23 +5,39 @@ import {useState} from "react";
      const onChangeHandler1 = props.onChangeHandler1
      const onShadow = props.onShadow
      const onHidden  = props.onHidden
+     const fromInput = props.fromInput
+     const [onRise, setOnRise] = useState(false)
 
 
-    /*const[text, setText] = useState();*/
+
     const onChangeHandler =(targetValue) => {
         onChangeHandler1(targetValue.target.value)
+        setOnRise(targetValue.target.value)
     }
+
+
+    const onFocus=()=>{
+        setOnRise(true)
+    }
+    const onBlur=()=>{
+        if (!fromInput)
+            setOnRise(false)
+
+    }
+
 
     return (
         <div className={classes.content}>
             <input
-                   onChange=
-                    {onChangeHandler}
-                   id='user-name'
+                onFocus={onFocus}
+                onBlur={onBlur}
+                   onChange = {onChangeHandler}
                    placeholder=' '
-                   autoComplete='off'
                    type = {onShadow}/>
-            <label for='user-name'>{onHidden}</label>
+
+                    <label className={onRise ? classes.up:classes.normal}>{onHidden}</label>
+
+
         </div>
     );
 };

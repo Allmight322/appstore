@@ -6,18 +6,21 @@
 .content input {
     border:none;
     outline: none;
+
 }
-.content label {
+.normal{
     position: absolute;
-    left: 6px;
-    color: #777777;
-    background: white;
-    transition: .2s;
+    right: 110px;
+    color: #777777;}
+.up{
+position: absolute;
+    bottom: 25px;
+    right:110px;
+
+
+
 }
-.content:focus-within label,
-.content input:not(:placeholder-shown){
-    margin: -17px 0;
-}
+
 
 
 
