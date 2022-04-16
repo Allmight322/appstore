@@ -7,15 +7,18 @@
     border:none;
     outline: none;
 
+
 }
 .normal{
     position: absolute;
-    right: 110px;
-    color: #777777;}
+    left: 5px;
+    color: #777777;
+    pointer-events: none;
+}
 .up{
 position: absolute;
     bottom: 25px;
-    right:110px;
+    left:5px;
 
 
 
