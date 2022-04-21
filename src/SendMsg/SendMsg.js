@@ -1,16 +1,16 @@
 import {useState} from "react";
 import React from 'react';
 
-export const SendMsg = (props) => {
-    const [LogPass, setLogPass] = useState()
-    const login = props.login
-    const password = props.password
-    fetch("https://alwertus.zapto.org:9007/api/auth", {
+
+export const SendMsg = (body, successHandler) => {
+
+
+    fetch("http://alwertus.zapto.org:9000/api/auth/login", {
         method: 'POST',
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(login,password)
+        body: JSON.stringify(body)
     })
         .then(rs => rs.json())
-        .then(rs => setLogPass(rs))
+        .then(successHandler)
         .catch(e => console.log("текст ошибки", e))
 }
