@@ -12,5 +12,5 @@ export const SendMsg = (body, successHandler) => {
     })
         .then(rs => rs.json())
         .then(successHandler)
-        .catch(e => console.log("текст ошибки", e))
+        .catch(e => console.log("ошибка", e))
 }

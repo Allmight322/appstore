@@ -1,20 +1,8 @@
-import EnterField from "./EnterField";
-import {useState} from "react";
+const LoggedIn =(props)=>{
+     const setOnLog = props.setOnLog
 
-const LoggedIn =()=>{
-    const [backOn, setBackOn] = useState(true)
-    const back=()=>{
-        if (!backOn)
-        return(
-            <EnterField/>
-        )
-    }
-    const backBack =()=>{
-        setBackOn(false)
-    }
     const backBacking=()=>{
-        backBack()
-        back()
+        setOnLog(false)
     }
 
     return(

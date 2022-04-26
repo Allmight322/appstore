@@ -14,13 +14,14 @@ const EnterField = (props) => {
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
 
-    const [across, setAcross] = useState(false)
+    const [mistake, setMistake] = useState('')
     const successHandler = (response) =>{
         if (response["result"]==='Ok'){
-            setAcross(true)
-            setOnLog(true)
-            console.log(response['result'])}
-        else console.log('Неверный пароль или логин')
+            setOnLog(true)}
+        else  setMistake('неверный логин или пароль')
+
+
+
 
 
     }
@@ -29,6 +30,7 @@ const EnterField = (props) => {
             <h1>Авторизация</h1>
             <Input fromInput={login} onChangeHandler1={setLogin} onTypeView={'text'} onView={'Логин'}/>
             <Input fromInput={password} onChangeHandler1={setPassword} onTypeView={'password'} onView={'Пароль'}/>
+            <div>{mistake}</div>
             <Button onClickHandler={()=>SendMsg({username:login, password: password}, successHandler)}/>
         </div>
     );

@@ -12,7 +12,7 @@ export const App = () => {
             if (!onLog)
                 return <EnterField setOnLog={setOnLog}/>
             else
-                return <LoggedIn/>
+                return <LoggedIn setOnLog={setOnLog}/>
         }
 
     return <div className={classes.content}>
