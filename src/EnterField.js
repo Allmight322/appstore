@@ -4,7 +4,7 @@ import Button from "./Button/Button";
 import classes from "./App.module.css"
 import {useState} from "react";
 import {SendMsg} from "./SendMsg/SendMsg";
-import App from "./App";
+
 
 
 

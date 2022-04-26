@@ -1,6 +1,7 @@
 import classes from "./App.module.css"
 import EnterField from './EnterField'
 import {useState} from "react"
+import LoggedIn from "./LoggedIn";
 
 
 export const App = () => {
@@ -11,7 +12,7 @@ export const App = () => {
             if (!onLog)
                 return <EnterField setOnLog={setOnLog}/>
             else
-                return <div>Тут будет второй компонент</div>
+                return <LoggedIn/>
         }
 
     return <div className={classes.content}>
